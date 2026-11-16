@@ -1,0 +1,125 @@
+.mission-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 48px 24px;
+}
+
+.mission-intro h2 {
+  color: var(--cream);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.objectifs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 48px;
+}
+
+.objectifs {
+  list-style: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.objectifs li {
+  padding: 18px 0 18px 20px;
+  border-left: 2px solid var(--rust);
+  margin-bottom: 12px;
+}
+
+.objectifs li h3 {
+  font-style: normal;
+  font-size: 1.05rem;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.objectifs li h3 i {
+  font-style: normal;
+  color: var(--rust);
+}
+
+.objectifs li p {
+  line-height: 1.6;
+}
+
+.objectifs-image {
+  width: 420px;
+  max-width: 45%;
+  border-radius: 6px;
+  border: 2px solid var(--rust);
+  flex-shrink: 0;
+}
+
+.secteur {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 48px;
+}
+
+.secteur h3 {
+  color: var(--cream);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--rust);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.secteur p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.secteur ul {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.secteur li {
+  padding: 10px 0 10px 20px;
+  border-left: 2px solid var(--rust);
+  margin-bottom: 8px;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 24px 48px 64px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--rust);
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta:hover {
+  background-color: var(--rust);
+  color: var(--bg-void);
+}
+
+@media (max-width: 800px) {
+  .objectifs-wrapper {
+    flex-direction: column;
+  }
+
+  .objectifs-image {
+    max-width: 100%;
+    width: 100%;
+  }
+}

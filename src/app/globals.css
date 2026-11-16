@@ -1,13 +1,11 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --bg-void: #0b0e14;
+  --rust: #c4512f;
+  --cream: #ead9bb;
+  --slate: #3e5064;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--bg-void);
+  --foreground: var(--cream);
 }
 
 html {
@@ -25,7 +23,12 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle, rgba(234, 217, 187, 0.9) 1px, transparent 1px),
+    radial-gradient(circle, rgba(234, 217, 187, 0.5) 1px, transparent 1px);
+  background-size: 180px 180px, 260px 260px;
+  background-position: 0 0, 90px 130px;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,8 +45,69 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* --- Navbar --- */
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 32px;
+  background-color: var(--bg-void);
+  border-bottom: 2px solid var(--rust);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--rust);
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+.menu ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.menu ul li a {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--cream);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.menu ul li a:hover {
+  color: var(--rust);
+  border-bottom-color: var(--rust);
+}
+
+@media (max-width: 640px) {
+  .menu {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .menu ul {
+    gap: 16px;
   }
 }
